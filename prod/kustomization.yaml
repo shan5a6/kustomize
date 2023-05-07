@@ -1,3 +1,4 @@
 bases:
 - ../base
+namespace: myproject-prod
 namePrefix: prod-

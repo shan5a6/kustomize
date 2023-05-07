@@ -1,4 +1,6 @@
 bases:
 - ../base
 namePrefix: dev-
+patchesStrategicMerge:
+- replicas.yaml
 

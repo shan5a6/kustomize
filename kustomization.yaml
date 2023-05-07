@@ -1,0 +1,8 @@
+resources:
+  - deployment1.yaml
+namespace: my-namespace
+namePrefix: dev-
+nameSuffix: "-001"
+commonLabels:
+  app: bingo
+  mydept: devops

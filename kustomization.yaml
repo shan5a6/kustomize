@@ -17,3 +17,7 @@ patchesJson6902:
     kind: Deployment
     name: nginx-deployment
   path: patch.yaml
+images:
+ - name: nginx
+   newName: mynginx
+   newTag: 1.0.0

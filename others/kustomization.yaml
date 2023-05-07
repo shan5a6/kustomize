@@ -1,8 +1,13 @@
 resources:
   - deployment1.yaml
+  - service.yaml
 namespace: my-namespace
 namePrefix: dev-
 nameSuffix: "-001"
+configMapGenerator:
+  - name: myconfigmap
+    literals:
+      - name="dinggond"
 commonLabels:
   app: bingo
   mydept: devops
@@ -21,3 +26,11 @@ images:
  - name: nginx
    newName: mynginx
    newTag: 1.0.0
+vars:
+- name: MY_SERVICE_NAME
+  objref:
+    kind: Service
+    name: my-nginx
+    apiVersion: v1   
+- name: CONFIG_MAP_NAME
+  value: 
